@@ -24,4 +24,10 @@ CREATE TABLE employee (
   manager_id INT NULL,
   PRIMARY KEY (id)
   );
-SELECT * FROM employee
+  
+SELECT employee.role_id, employee.first_name, employee.last_name,manager_id,role.title,role.salary,role.department_id
+FROM employee
+INNER JOIN role ON employee.role_id=role.id;
+
+
+
